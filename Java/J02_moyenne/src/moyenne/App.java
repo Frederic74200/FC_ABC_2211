@@ -41,7 +41,7 @@ public class App {
 		// TODO Auto-generated method stub
 		
 		
-		//VARIABLE
+		//VARIABLES
 		int nombre1;
 		int nombre2;
 		double moyenne;
