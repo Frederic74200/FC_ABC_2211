@@ -17,9 +17,9 @@ public class App {
 		double a;
 		double b;
 		double c;
-		double p1;
-		double p2;
-		double p3;
+		double p1 = 0;
+		double p2 = 0;
+		double p3 = 0;
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -49,22 +49,21 @@ public class App {
 		if (a<b) { p1=a; p2=b;
 				if (c>p2) {	p3=c;}
 				else if (c<p1) {p3=p2; p2=p1; p1=c;	}
-				else {p3=p2; c=p2;}
+				else {p3=p2; p2=c;}
+				
+				System.out.println( "l'ordre des nombres est : "+p1+" ; "+p2+" ; "+p3);
 		}
 		
+		// -------------
 		
-		if (a>b) { p1=b; p2=a;
-		if (c>p2) {	p3=c;}
-		else if (c<p1) {p3=p2; p2=p1; p1=c;	}
-		else {p3=p2; c=p2;}
-}
-		
-		
-		
-		// afficher le résultat
-		
+		else if (b<a) { p1=b; p2=a;
+			if (c>p2) {	p3=c;}
+			else if (c<p1) {p3=p2; p2=p1; p1=c;	}
+			else {p3=p2; p2=c;}
 		
 		System.out.println( "l'ordre des nombres est : "+p1+" ; "+p2+" ; "+p3);
+}
+		
 		
 		
 		
