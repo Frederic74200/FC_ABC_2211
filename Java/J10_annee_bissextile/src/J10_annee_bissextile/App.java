@@ -19,20 +19,29 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		// lire écrire l'année
 		System.out.println("Veuillez saisr l'année ");
 
 		annee = sc.nextInt();
 		
+		System.out.println("Vous avez saisi l'année : "+annee);
 		
 		
-		// lire écrire l'année
-		while (annee % 1 == 0d) {
-			System.out.println("Veuillez saisr l'année ");
-			annee = sc.nextInt();
+	
+
+		// if et else 
+		
+		
+		
+		
+		if ((annee % 100 == 0 && annee % 400 != 0) || annee % 4 != 0) {
+			System.out.println("l'année "+annee+" n'est pas bissextile.");
 		}
 		
-		// if et else if 
 		
+		else  {
+			System.out.println("l'année "+annee+" est bissextile.");
+		}	
 		
 
 	}
