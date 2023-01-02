@@ -18,12 +18,22 @@ public class App {
 		System.out.println("Afficher les diviseurs d'un nombre.");
 		System.out.println("Veuillez saisir un nombre.");
 		
+		nombre = sc.nextInt();
 		
+		System.out.println("Vous avez saisi : "+nombre);
 		
 		
 		// boucle for
 		
-		
+		for(int i=2; i < nombre; i++) {
+			
+			if(nombre%i ==0) {
+				System.out.println("Les diviseurs du nombre "+nombre+" sont "+i);
+			}
+			
+	
+			
+		}
 		
 	}
 
