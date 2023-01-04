@@ -19,43 +19,57 @@ public class App {
 		
 		// Déclarer les variables
 		
-		String texte;
+		String chaine;
 		double miles;
-	
+		
 		Scanner sc = new Scanner(System.in);
 		
 		// Ecrire lire valeur boucle 
 		
 		System.out.println("Conversion kilomètres miles");
 		
-	System.out.println("Veuillez saisir le nombre de kilomètres.");
+		System.out.println("Veuillez saisir le nombre de kilomètres.");
 		
-		texte = sc.next() ;
+		chaine = sc.next() ;
+		
+		System.out.println("Vous avez saisi : "+chaine);
 		
 		
-		if (texte=="q") {
-			
-			System.out.println("Fin de programme");
-		}
+		char texte = chaine.charAt(0);
+		
 	
+	    double nombre = Double.parseDouble(chaine);
+	 
+	//    System.out.println("Le nombre est"+nombre);
+	      
 		
-		else {	
+		while (texte != 113 || (nombre<0.01d && nombre>1000000d) ) {
 			
+			System.out.println("Veuillez saisir le nombre de kilomètres.");
 			
-			double dnum = new Double(texte);
+			chaine = sc.next() ;
 			
-			System.out.println("La valeur est"+dnum);
+			System.out.println("Vous avez saisi : "+chaine);
+			
 		}
+		
+	
+		if (texte==113) {
 			
+			System.out.println("programme terminé !");
+			
+		}
 		
 		
+		else {
+			
+			miles = nombre*1.609;
+			
+			System.out.println(nombre+" kilomètres équivalent à "+miles+" miles.");
+			
+		}
 		
 		
-		
-		
-		
-		
-		// conversion
 		
 		
 		
