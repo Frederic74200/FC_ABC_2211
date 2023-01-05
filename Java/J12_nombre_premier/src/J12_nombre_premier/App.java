@@ -13,7 +13,7 @@ public class App {
 		// Déclarer les variables
 		
 		int nombre;
-		int i =2;
+		int i ;
 		int test=1;
 		
 		Scanner sc = new Scanner(System.in);

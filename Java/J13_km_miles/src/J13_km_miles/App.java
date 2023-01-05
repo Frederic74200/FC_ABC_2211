@@ -20,6 +20,8 @@ public class App {
 		// Déclarer les variables
 		
 		String chaine;
+		char texte = 112;
+		double nombre = -1.0;
 		double miles;
 		
 		Scanner sc = new Scanner(System.in);
@@ -28,35 +30,26 @@ public class App {
 		
 		System.out.println("Conversion kilomètres miles");
 		
-		System.out.println("Veuillez saisir le nombre de kilomètres.");
-		
-		chaine = sc.next() ;
-		
-		System.out.println("Vous avez saisi : "+chaine);
-		
-		
-		char texte = chaine.charAt(0);
-		
-	
-	    double nombre = Double.parseDouble(chaine);
-	 
-	//    System.out.println("Le nombre est"+nombre);
-	      
-		
-		while (texte != 113 || (nombre<0.01d && nombre>1000000d) ) {
+		 
+			//  System.out.println("Le nombre est"+nombre);
+			     
+      		
+		while ( texte != 113   || nombre<0.01d || nombre>1000000d ) {
 			
 			System.out.println("Veuillez saisir le nombre de kilomètres.");
 			
 			chaine = sc.next() ;
 			
 			System.out.println("Vous avez saisi : "+chaine);
-			
+			texte = chaine.charAt(0); 
+			nombre = Double.parseDouble(chaine);
 		}
 		
-	
+		
 		if (texte==113) {
 			
 			System.out.println("programme terminé !");
+		
 			
 		}
 		
@@ -68,7 +61,6 @@ public class App {
 			System.out.println(nombre+" kilomètres équivalent à "+miles+" miles.");
 			
 		}
-		
 		
 		
 		
