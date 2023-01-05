@@ -10,70 +10,61 @@ Le programme affiche le résultat de la conversion sous forme de nombre réel do
 
 import java.util.*;
 
-
 public class App {
 
 	@SuppressWarnings("removal")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		// Déclarer les variables
-		
+
 		String chaine;
-		char texte = 112;
-		double nombre = -1.0;
+		char texte;
+		int askii;
+		double nombre;
 		double miles;
-		
+
 		Scanner sc = new Scanner(System.in);
-		
-		// Ecrire lire valeur boucle 
-		
+
+		// Ecrire lire valeur boucle
+
 		System.out.println("Conversion kilomètres miles");
-		
-		 
-			//  System.out.println("Le nombre est"+nombre);
-			     
-      		
-		while ( texte != 113   || nombre<0.01d || nombre>1000000d ) {
-			
+
+		// System.out.println("Le nombre est"+nombre);
+
+		do {
+
 			System.out.println("Veuillez saisir le nombre de kilomètres.");
-			
-			chaine = sc.next() ;
-			
-			System.out.println("Vous avez saisi : "+chaine);
-			texte = chaine.charAt(0); 
+
+			chaine = sc.next();
+
+			System.out.println("Vous avez saisi : " + chaine);
+			texte = chaine.charAt(1);
+			askii = texte;
 			nombre = Double.parseDouble(chaine);
-		}
+
+			if (askii == 113 || (nombre > 0.01d && nombre < 1000000)) {
+				break;
+			}
+		} while (askii != 113 || (nombre < 0.01d || nombre > 1000000d));
+
+		// quitter ou calcul
 		
-		
-		if (texte==113) {
-			
+		if (askii == 113) {
+
 			System.out.println("programme terminé !");
-		
-			
+
 		}
-		
-		
+
 		else {
-			
-			miles = nombre*1.609;
-			
-			System.out.println(nombre+" kilomètres équivalent à "+miles+" miles.");
-			
+
+			miles = nombre / 1.609d;
+
+			System.out.println(nombre + " kilomètres équivalent à " + miles + " miles.");
+
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
+		sc.close();
 
 	}
 

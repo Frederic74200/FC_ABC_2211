@@ -15,47 +15,36 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		// Déclarer les variables 
-		
+		// Déclarer les variables
+
 		int S;
-		int mag=0;
-		Scanner sc = new Scanner(System.in);		
+		int mag;
+		int depense;
+		Scanner sc = new Scanner(System.in);
 		// lire écrire somme
-		
-		
-		
+
 		do {
 			System.out.println("La somme doit être supérieure à 1€");
 			System.out.println("Veuillez saisir la somme de départ");
 			S = sc.nextInt();
-			
-			if (S>=1) {
+
+			if (S >= 1) {
 				break;
 			}
-		} while(S<1);
-			
-	
-		do {				
-				S= S/2+1;
-				mag++;
-				
-				if (S<1) {
-					break;
-			} while(S>=1);
-			
+		} while (S < 1);
 
-		
-		mag = mag+1;
-		
-		System.out.println("Vous avez acheté dans "+mag+" magasins.");
-		
-		
-		
-		
-		
+		for (mag = 0; mag < S; mag++) {
+			S = S / 2 - 1;
+
+			if (S < 1) {
+				break;
+			}
+		}
+
+		System.out.println("Vous avez acheté dans " + mag + " magasins.");
+
 		sc.close();
-			
-		
+
 	}
 
 }
