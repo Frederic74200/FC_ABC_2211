@@ -19,8 +19,8 @@ public class App {
 		// Déclarer les variables
 
 		String chaine;
-		char texte;
-		int askii;
+		String quit = "q";
+		Boolean termine = false;
 		double nombre;
 		double miles;
 
@@ -36,33 +36,39 @@ public class App {
 
 			System.out.println("Veuillez saisir le nombre de kilomètres.");
 
-			chaine = sc.next();
+			chaine =sc.nextLine();
 
 			System.out.println("Vous avez saisi : " + chaine);
-			texte = chaine.charAt(1);
-			askii = texte;
-			nombre = Double.parseDouble(chaine);
 
-			if (askii == 113 || (nombre > 0.01d && nombre < 1000000)) {
+		
+
+			if (chaine.equals(quit) ) {
+				
+				System.out.println("programme terminé !");
+				termine = true;
 				break;
 			}
-		} while (askii != 113 || (nombre < 0.01d || nombre > 1000000d));
+			
+			else {
+				nombre = Double.parseDouble(chaine);
+				if (nombre > 0.01d && nombre < 1000000d) {
+					termine = true;
+			}
+				
+				
+			
+			}
+		} while (termine = false || (nombre < 0.01d || nombre > 1000000d));
 
 		// quitter ou calcul
-		
-		if (askii == 113) {
 
-			System.out.println("programme terminé !");
-
-		}
-
-		else {
+	
 
 			miles = nombre / 1.609d;
 
 			System.out.println(nombre + " kilomètres équivalent à " + miles + " miles.");
 
-		}
+		
 
 		sc.close();
 

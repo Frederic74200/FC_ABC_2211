@@ -41,17 +41,16 @@ public class App {
 	
 	// lire écrie nombre
 	
-	System.out.println("Veuillez saisir un nombre entre 0 et 100 : ");
-	proposition = sc.nextInt();
 	
-	while(proposition<min || proposition >max) {
+	
+	do {
 		System.out.println("Veuillez saisir un nombre entre 0 et 100 : ");
 		proposition = sc.nextInt();
 		
 		if(proposition>min || proposition<max) {
 			break;
 		} 
-	} 
+	} while(proposition<min || proposition >max);
 	
 	
 	
@@ -76,7 +75,7 @@ public class App {
 		
 	}
 	
-	System.out.println("Bravo ! vous avez trouvez le nombre en "+i+" essais." );
+	System.out.println("Bravo ! Vous avez trouvez le nombre en "+i+" essais." );
 	
 	
 	

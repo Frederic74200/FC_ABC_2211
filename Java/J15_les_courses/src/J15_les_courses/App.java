@@ -32,9 +32,12 @@ public class App {
 				break;
 			}
 		} while (S < 1);
+		
+		// boucle
 
 		for (mag = 0; mag < S; mag++) {
 			S = S / 2 - 1;
+			System.out.println(S);
 
 			if (S < 1) {
 				break;
