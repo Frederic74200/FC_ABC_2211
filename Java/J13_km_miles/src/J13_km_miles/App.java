@@ -8,11 +8,11 @@ Formule km vers mi :   	1 miles = 1.609 kilomètres
 Le programme affiche le résultat de la conversion sous forme de nombre réel double précision. 
 */
 
-import java.util.*;
+import java.util.Scanner;
 
 public class App {
 
-	@SuppressWarnings("removal")
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -36,7 +36,7 @@ public class App {
 
 			System.out.println("Veuillez saisir le nombre de kilomètres.");
 
-			chaine =sc.nextLine();
+			chaine =sc.next();
 
 			System.out.println("Vous avez saisi : " + chaine);
 
@@ -49,16 +49,27 @@ public class App {
 				break;
 			}
 			
-			else {
-				nombre = Double.parseDouble(chaine);
-				if (nombre > 0.01d && nombre < 1000000d) {
+			
+				try{
+		             nombre = Double.parseDouble(chaine);
+		            System.out.println(nombre); 
+		          
+		        }
+		        catch (NumberFormatException ex){
+		            ex.printStackTrace();
+		        }
+				
+				
+				
+			for (nombre = 0.01d; nombre < 1000000d;) {
 					termine = true;
+					
 			}
 				
 				
 			
-			}
-		} while (termine = false || (nombre < 0.01d || nombre > 1000000d));
+			
+		} while (termine = false );
 
 		// quitter ou calcul
 
@@ -71,6 +82,7 @@ public class App {
 		
 
 		sc.close();
+		
 
 	}
 

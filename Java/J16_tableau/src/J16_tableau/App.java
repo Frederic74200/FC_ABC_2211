@@ -18,8 +18,9 @@ public class App {
 		Scanner sc = new Scanner(System.in);
 
 		int N;
-		int i = 0;
+		int i ;
 		boolean trouve ;
+		int present =0;
 
 		// construire tableau
 
@@ -33,25 +34,26 @@ public class App {
 
 		// parcourir tableau
 
-		while ( tableau[i] < tableau.length) {
+		for ( i=0; i < tableau.length; i++) {
 		
-			if (tableau[i] != N) {
-				
-				i++;
+			if (tableau[i] == N) {
+				trouve = true;
+				present = present+1;
+				break;
 			}
 			
-			else if (tableau[i] == N) {
+			else if ( i==8) {
 				trouve = true;
 				break;
+				
 			}
 			
-			else if (tableau[i] == tableau.length) {
+			else {
 				trouve = false;
-				break;
 			}
 		}
 
-		if (trouve = true) {
+		if (present==1) {
 			
 			System.out.println("Le nombre " + N + " est en indice " + i);
 		}
