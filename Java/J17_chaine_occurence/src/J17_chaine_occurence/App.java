@@ -21,43 +21,69 @@ public class App {
 		String chaine;
 		String point = ".";
 		String lettre;
-		String rien = "";
-		boolean vide = false;
+		boolean vide;
+		int ok = 0;
+		int i = 0;
+		int trouve = 0;
 		Scanner sc = new Scanner(System.in);
 
 		// écrire lire chaîne
 
 		do {
 			System.out.println("saisiez un mot ou une phrase.");
-			chaine = sc.next();
+			chaine = sc.nextLine();
 			chaine = chaine + point;
-
-			if (chaine.equals(point) || chaine.equals(rien)) {
+			
+			if (chaine.equals(point)) {
 				System.out.println("La chaîne est vide !");
 
 				vide = false;
+				ok = ok + 0;
 
 			}
 
 			else {
 				vide = true;
-
+				ok = ok + 1;
+				break;
 			}
 
-		} while (vide = false);
-		
-		
+		} while (ok == 0);
+
 		// afficher occurence
 
-		if (vide = true) {
-			System.out.println("Vous avez saisi : " + chaine);
+		if (ok == 1) {
 
 			System.out.println("Veuillez saisir la lettre à compter.");
 
-			lettre = sc.next();
+			lettre = sc.nextLine();
+
+		 char lettre2 = lettre.charAt(0);
+		 char point2 = point.charAt(0);
+
+			for (i = 0; i < chaine.length() ; i++ ) {
+				
+				char tmp = chaine.charAt(i);
+
+				 if (tmp == lettre2) {
+
+					trouve = trouve + 1;
+					System.out.println(trouve);
+			
+					
+				}
+
+				else if (tmp == point2) {
+					break;
+					
+				} 
+			}
 
 		}
 
+		// abracadabra
+
+		System.out.println("La lettre apparait " + trouve + " fois.");
 	}
 
 }
