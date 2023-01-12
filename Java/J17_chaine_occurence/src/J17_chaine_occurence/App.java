@@ -57,13 +57,15 @@ public class App {
 			System.out.println("Veuillez saisir la lettre à compter.");
 
 			lettre = sc.nextLine();
+			
+			String chaineCasse = chaine.toLowerCase();
 
 		 char lettre2 = lettre.charAt(0);
 		 char point2 = point.charAt(0);
 
-			for (i = 0; i < chaine.length() ; i++ ) {
+			for (i = 0; i < chaineCasse.length() ; i++ ) {
 				
-				char tmp = chaine.charAt(i);
+				char tmp = chaineCasse.charAt(i);
 
 				 if (tmp == lettre2) {
 
@@ -81,7 +83,7 @@ public class App {
 
 		}
 
-		// abracadabra
+		// abracadabra  Abracadabra 
 
 		System.out.println("La lettre apparait " + trouve + " fois.");
 	}

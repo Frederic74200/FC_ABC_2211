@@ -17,9 +17,9 @@ public class App {
 
 		// Déclarer les variables
 
-		int S;
-		int mag;
-		int depense;
+		int S =0;
+		int mag = 0;
+		double reste ;
 		Scanner sc = new Scanner(System.in);
 		// lire écrire somme
 
@@ -28,21 +28,28 @@ public class App {
 			System.out.println("Veuillez saisir la somme de départ");
 			S = sc.nextInt();
 
-			if (S >= 1) {
-				break;
-			}
+			
 		} while (S < 1);
 		
+		
+		
+		reste = S; 
+		
+
 		// boucle
 
-		for (mag = 0; mag < S; mag++) {
-			S = S / 2 - 1;
-			System.out.println(S);
+		while ( reste >=1) {
+			
+			reste = reste / 2 - 1;
+		
+			mag++;
+		
+			System.out.println(reste+" et "+mag);
 
-			if (S < 1) {
-				break;
-			}
+			
 		}
+		
+		mag = mag-1;
 
 		System.out.println("Vous avez acheté dans " + mag + " magasins.");
 
