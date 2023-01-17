@@ -16,9 +16,11 @@ public class App {
 		// Déclarer les variables
 		
 		int nombre;
-		String chaine;
-		int taille;
-		int tableau[];
+		int dix;
+		int cent;
+		int mille;
+		int reste;
+		int total;
 		
 		Scanner sc = new Scanner(System.in);
 		// do while <0 >100
@@ -30,21 +32,44 @@ public class App {
 		} while (nombre < 0 || nombre > 1000);
 		
 		
-		System.out.print("Le nombre est : "+ nombre);
+		System.out.println("Le nombre est : "+ nombre);
+		
+			reste = nombre % 1000;
+			
+			mille = (nombre- reste) / 1000;
+			
+			nombre = reste; 
+			
+		System.out.println("Le mille est : "+ mille);
+		
+		reste = nombre % 100;
+		
+		cent = (nombre- reste) / 100;
+		
+		nombre = reste; 
+		
+		System.out.println("Le cent est : "+ cent);
+		
+		
+		reste = nombre % 10;
+		
+		dix = (nombre- reste) / 10;
+		
+		
+		
+		System.out.println("Le dix est : "+ dix);
+		
+		
+		System.out.println("Le reste est : "+ reste);
+		
+		
 		// total
 		
-		chaine = String.valueOf(nombre); // conversion nombre en chaîne
+		total = mille + cent + dix + reste ;
 		
-		
-		
-		tableau = new int[chaine.length()];
-		
-		
-		for (int i =0 ; i< tableau.length; i++) {
+		System.out.println("le total est : "+total );
 			
-			tableau[i] = Integer.valueOf(chaine[i]);
-			
-		}
+		
 		
 	}
 

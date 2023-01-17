@@ -5,17 +5,13 @@ public class App {
 	public static void main(String[] args) {      
 		// TODO Auto-generated method stub
 		
-		int somme =1;
-		int mag =0;
-		
-		while (somme < 1000) {
-			
-			somme = somme*2+1;
-			mag++;
-			System.out.println(somme+" et "+mag);
-			
-		}
-		
+		 double value = 4.7;
+	        System.out.printf( "Math.floor( %.1f ) == %.1f\n", value, Math.floor( value ) );
+	        
+	        value = 4.1;
+	        System.out.printf( "Math.floor( %.1f ) == %.1f\n", value, Math.floor( value ) );
+	
+	
 
 	}
 
