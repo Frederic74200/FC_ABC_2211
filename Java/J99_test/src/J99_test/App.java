@@ -6,16 +6,30 @@ public class App {
 	public static void main(String[] args) {      
 		// TODO Auto-generated method stub
 		
-		 /*
-		Scanner sc= new Scanner(System.in); //System.in is a standard input stream  
-		System.out.print("Enter a string: ");
-		String str= sc.nextLine(); //reads string   
-		System.out.print("You have entered: "+str);        
-		
-		
-	*/
-	
-	
+		 String espace = " ";
+		 String etoile = "*";
+		 String egal = "=";
+		 String chaine= "";
+		 int j =0;
+		 
+		 for (j = 0; j < 46; j++) {
+
+				if (j % 2 == 0 && j < 11) {
+					chaine = chaine + espace;
+				}
+
+				else if (j % 2 == 1 && j < 11) {
+					chaine = chaine + etoile;
+				}
+
+				else {
+					chaine = chaine + egal;
+				}
+
+			} // fin boucle for
+
+			
+		 System.out.println(chaine);
 	}
 
 }
