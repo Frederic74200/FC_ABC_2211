@@ -27,7 +27,7 @@ public class App {
 				"Pour connaîte quel numéro a été attribué à quel stagiaire, veuillez saisir un nombre entre 1 et 12.");
 		rang = sc.nextInt();
 		
-		if (rang >0 && rang < groupe.length+1); {
+		if (rang >0 && rang < 13) {
 			index = rang-1;
 			System.out.println("Le stagiaire auquel a été attribué le numéro : "+rang+" est : "+groupe[index]);
 			
