@@ -21,12 +21,14 @@ public class Max_array {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int max;
+		
+		Max_array 
+		int max =0;
 		
 		int array[] = {1, 2, 9, 4};
 		
 	
-		
+	
 		
 		
 		
