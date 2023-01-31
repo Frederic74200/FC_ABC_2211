@@ -1,170 +1,116 @@
 package Ob04_porte_garage;
-import java.util.*;
 
 public class PorteDeGarage {
-	
+
 	private String nomPorteGrarage;
-	
+
 	private boolean verouillee;
-	private int tauxOuverture ;
-	private boolean ouvertPartiel ;
-	private boolean ouvertEntier;
-	private boolean fermee;
-	
-	
-	
-	
-	public PorteDeGarage() { // porte par défaut
-		
-		this.nomPorteGrarage = "Porte de gararge par défaut";
-		
-		this.verouillee = true;
-		this.tauxOuverture  = 0;
-		this.ouvertPartiel = false; 
-		this.ouvertEntier = false;
-		this.fermee = true;		
-	}
-	
+	private int tauxOuverture;
 	
 
-	public PorteDeGarage( String _nomPorteDEGararge, boolean  _verrouillee,  
-			int _tauxOuverture, boolean _ouvertPartiel , boolean _ouvertEntier, boolean _fermee ) { // porte à construie
+	public PorteDeGarage() { // porte par défaut
+
+		this.nomPorteGrarage = "Porte de gararge par défaut";
+
+		this.verouillee = true;
+		this.tauxOuverture = 0;
 		
+	}
+
+	public PorteDeGarage(String _nomPorteDEGararge, boolean _verrouillee, int _tauxOuverture) {
+		// porte à construie
+
 		this.nomPorteGrarage = _nomPorteDEGararge;
-		
-		this.verouillee =  _verrouillee;
-		this.tauxOuverture  = _tauxOuverture ;
-		this.ouvertPartiel = _ouvertPartiel ;
-		this.ouvertEntier = _ouvertEntier;
-		this.fermee =_fermee;		
-	}
-	
-	
-	
-	
-	public void nomPorte() { // infos porte
-		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("Veuillez saisir le nom de la porte de garage.");
-		this.nomPorteGrarage = sc.nextLine();
-		
-		System.out.println("Le nom de la porte est : "+this.nomPorteGrarage );
+
+		this.verouillee = _verrouillee;
+		this.tauxOuverture = _tauxOuverture;
 		
 	}
-	
-	
-	
+
+	// ------------------------------------------------------------------------------
+
 	public boolean verrouiller() {
-		
-		
-		if (this.fermee == true) {
-		
-			if (this.verouillee == true ) {
-		
-				System.out.println("La porte est vérouillée ! ");
-				return false;
-			}
+
+		if (this.tauxOuverture == 0) {
+
+			if (this.verouillee == true) {
+				this.verouillee = false;
+				return false;}
 			else {
-				return true;
-			}		
-		
-		} 		// if fermme
-		
-		else {
-			return false; 
+				this.verouillee = true;
+				return true;}
 		}
-	}
-	
+
+		else {
+			return false;
+		}
+	}  // Fin verrouiller
 	
 
 	
 	public boolean ouvrirPartiel() {
-		
-		if (this.verouillee == false && this.tauxOuverture > 0 && this.tauxOuverture < 100) {
-		
-		if (this.ouvertPartiel == true ) {
-			System.out.println("La porte est ouverte à :"+this.tauxOuverture+" %.");
+
+		if (this.tauxOuverture > 0 && this.tauxOuverture < 100) {
+
+			return true;}
+
+		else {
 			return false;
 		}
-		else {
-			return true;
-		}
-		}
-		
-		else {
-			
-			return true;
-		}
-	}
+	} // fin ouverture partielle 
 	
 	
-	public boolean ouvrirEntier() {ouvertPartiel 
-		if (this.verouillee == false ) {
-		
-		if (this.ouvertEntier == true ) {
-			this.tauxOuverture = 100;
-			System.out.println("La porte est complétement ouverte ! ");
-			return false;
-		}
-		else {
+
+	public boolean ouvrirEntier() {
+		if (this.verouillee == false) {
+
+			if (this.tauxOuverture != 100) {
+				this.tauxOuverture = 100;
+				return true;
+			} else {
+				return false;
+			}
+		} else {
 			return true;
 		}
-		}
-		else {
-			return true;
-		}
-	}
-	
-	
+	} // fin ouvert enier 
+
 	public boolean fermer() {
-		
-		if (this.fermee == true ) {
-			this.tauxOuverture = 0; 
-			System.out.println("La porte est fermée ! ");
-			return false;
-		}
-		else {
+
+		if (this.tauxOuverture != 0) {
+			this.tauxOuverture = 0;
 			return true;
 		}
-		
+
+		else {
+			return false;
+		}
+
+	} // fin fermer 
+	
+	
+	
+	// get return 
+	
+	public int getTauxOuverture() {
+		return this.tauxOuverture;
+	}
+	
+	public boolean getVerrouille() {
+		return this.verouillee; 
 	}
 	
 	
-	public static void main(String[] args) {  
-		
-		
-		
-		
-		
-		
-		
-		
-		System.out.println("_____________________________________________________");
+	
+
+	@Override
+	public String toString() {
+
+		return "Nom de la porte : " + this.nomPorteGrarage + "\r\n" 
+		+ "Porte vérouillée : " + this.verouillee + "\r\n"
+				+ "Taux d'ouverture : " + this.tauxOuverture  ;
 		
 	}
 
 	
-	public static void bis(String[] args) {  
-		
-		
-		
-		
-	}
-	
-	
-	public static void ter(String[] args) {  
-		
-		
-		
-		
-	}
-	
-	
-	public static void quad(String[] args) {  
-		
-		
-		
-		
-	}
 }
