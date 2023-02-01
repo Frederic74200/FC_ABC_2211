@@ -7,6 +7,8 @@ public class PorteDeGarage {
 	private boolean verouillee;
 	private int tauxOuverture;
 	
+	
+	
 
 	public PorteDeGarage() { // porte par défaut
 
@@ -34,7 +36,6 @@ public class PorteDeGarage {
 		if (this.tauxOuverture == 0) {
 
 			if (this.verouillee == true) {
-				this.verouillee = false;
 				return false;}
 			else {
 				this.verouillee = true;
@@ -47,10 +48,23 @@ public class PorteDeGarage {
 	}  // Fin verrouiller
 	
 
+	public boolean deverrouiller() {
+			if (this.verouillee == true) {
+				this.verouillee = false;
+				return true;}
+			
+			else {				
+				return false;}		
+	}  // Fin dseverrouiller
+	
+
 	
 	public boolean ouvrirPartiel() {
 
-		if (this.tauxOuverture > 0 && this.tauxOuverture < 100) {
+		if (this.verouillee == false) {
+			
+			
+		
 
 			return true;}
 
@@ -66,6 +80,7 @@ public class PorteDeGarage {
 
 			if (this.tauxOuverture != 100) {
 				this.tauxOuverture = 100;
+				
 				return true;
 			} else {
 				return false;
@@ -79,6 +94,7 @@ public class PorteDeGarage {
 
 		if (this.tauxOuverture != 0) {
 			this.tauxOuverture = 0;
+			
 			return true;
 		}
 
@@ -90,7 +106,8 @@ public class PorteDeGarage {
 	
 	
 	
-	// get return 
+	
+	// get return ---------------------------------------------------------
 	
 	public int getTauxOuverture() {
 		return this.tauxOuverture;
@@ -101,8 +118,8 @@ public class PorteDeGarage {
 	}
 	
 	
-	
 
+	
 	@Override
 	public String toString() {
 

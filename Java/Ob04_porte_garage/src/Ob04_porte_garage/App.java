@@ -31,13 +31,19 @@ public class App {
 		System.out.println(prt1.toString());
 		System.out.println("_____________________________________________________");
 
+		System.out.println("Déerrrouillage"); 
+		Boolean deverrouPrt = prt1.deverrouiller();
+		System.out.println(deverrouPrt);
+		System.out.println(prt1.getTauxOuverture()); 
+		System.out.println(prt1.toString());
+		System.out.println("_____________________________________________________");
 		
-		
-
-		
-		
-		// System.out.println("_____________________________________________________");
-
+		System.out.println("ouverture partielle"); 
+	//	int nouveauTauxOuverture = new prt1.;
+		System.out.println(verrouPrt);
+		System.out.println(prt1.getTauxOuverture()); 
+		System.out.println(prt1.toString());
+		System.out.println("_____________________________________________________");
 	}
 
 }
