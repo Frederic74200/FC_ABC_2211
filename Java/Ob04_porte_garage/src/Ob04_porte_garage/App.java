@@ -39,8 +39,7 @@ public class App {
 		System.out.println("_____________________________________________________");
 		
 		System.out.println("ouverture partielle"); 
-	//	int nouveauTauxOuverture = new prt1.;
-		System.out.println(verrouPrt);
+		 prt1.setTauxOuverture(30);
 		System.out.println(prt1.getTauxOuverture()); 
 		System.out.println(prt1.toString());
 		System.out.println("_____________________________________________________");

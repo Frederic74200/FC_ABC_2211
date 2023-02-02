@@ -107,7 +107,7 @@ public class PorteDeGarage {
 	
 	
 	
-	// get return ---------------------------------------------------------
+	// get return set ---------------------------------------------------------
 	
 	public int getTauxOuverture() {
 		return this.tauxOuverture;
@@ -117,7 +117,10 @@ public class PorteDeGarage {
 		return this.verouillee; 
 	}
 	
+	public void setTauxOuverture(int newTauxOuverture) {
+		this.tauxOuverture = newTauxOuverture;
 	
+	}
 
 	
 	@Override
