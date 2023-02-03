@@ -71,9 +71,8 @@ public class Ascenseur {
 	// doit monter
 	public boolean doitMonter() {
 
-		if (this.etageDemande > this.positionEtage && this.etageDemande <= this.etageMax) {
-
-			this.porteOuverte = false;
+		if (this.porteOuverte == false && this.etageDemande > this.positionEtage && this.etageDemande <= this.etageMax) {
+		
 			this.ascenseurDoitMonter = true;
 			this.AscenseurDoitDescendre = false;
 			return true;
@@ -86,9 +85,9 @@ public class Ascenseur {
 
 	public boolean doitDescendre() {
 
-		if (this.etageDemande < this.positionEtage && this.etageDemande >= this.etageMin) {
+		if (this.porteOuverte == false &&this.etageDemande < this.positionEtage && this.etageDemande >= this.etageMin) {
 
-			this.porteOuverte = false;
+			
 			this.ascenseurDoitMonter = false;
 			this.AscenseurDoitDescendre = true;
 			return true;
@@ -102,6 +101,7 @@ public class Ascenseur {
 	public boolean monter() {
 
 		if (this.porteOuverte == false && this.ascenseurDoitMonter == true) {
+			this.positionEtage = this.etageDemande;
 
 			return true;
 		} else {
@@ -114,25 +114,14 @@ public class Ascenseur {
 	public boolean descendre() {
 
 		if (this.porteOuverte == false && this.AscenseurDoitDescendre == true) {
-
+			this.positionEtage = this.etageDemande;
 			return true;
 		} else {
 			return false;
 		}
 	}
 	
-	//ouverture arrivée 
 	
-	/*public boolean ouvertureArrivee() {
-		if (this.positionEtage == this.etageDemande) {
-			this.porteOuverte = true;
-			return true;
-		}
-		else {
-			return false;
-		}
-	} */
-
 	// get set
 	// -------------------------------------------------------------------------------------------------------------------
 
@@ -149,6 +138,10 @@ public class Ascenseur {
 	public int getPositionEtage() {
 		return this.positionEtage;
 	}
+	
+	public int getEtageDemande(){
+		return this.etageDemande;
+	}
 
 	public boolean getPorteOuverte() {
 		return this.porteOuverte;
@@ -164,9 +157,69 @@ public class Ascenseur {
 
 	// set ---------------------------------
 
-	public void setEtageDemande(int newEtageDemade) {
+	public int setEtageDemande(int newEtageDemade) {
 		this.etageDemande = newEtageDemade;
+		return newEtageDemade;
 	}
+	
+	public void setPorteOuverte (Boolean newPorteOuverte) {
+		this.porteOuverte = newPorteOuverte;
+	}
+	
+	// fonctions de fonctions
+	
+	public void leFaireMonter() {
+		
+		fermer();
+		doitMonter();
+		monter();
+		ouvrir();				
+	}
+	
+	
+	public void leFaireDescendre() {
+		
+		fermer();
+		doitDescendre();
+		descendre();
+		ouvrir();				
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	// toString
 	// ---------------------------------------------------------------------------------------------------------------------
