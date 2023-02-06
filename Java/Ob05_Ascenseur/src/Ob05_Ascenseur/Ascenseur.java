@@ -69,9 +69,9 @@ public class Ascenseur {
 	}
 
 	// doit monter
-	public boolean doitMonter() {
+	public boolean doitMonter( int _etageDemande) {
 
-		if (this.porteOuverte == false && this.etageDemande > this.positionEtage && this.etageDemande <= this.etageMax) {
+		if (this.porteOuverte == false && _etageDemande > this.positionEtage && this.etageDemande <= this.etageMax) {
 		
 			this.ascenseurDoitMonter = true;
 			this.AscenseurDoitDescendre = false;
@@ -165,57 +165,6 @@ public class Ascenseur {
 	public void setPorteOuverte (Boolean newPorteOuverte) {
 		this.porteOuverte = newPorteOuverte;
 	}
-	
-	// fonctions de fonctions
-	
-	public void leFaireMonter() {
-		
-		fermer();
-		doitMonter();
-		monter();
-		ouvrir();				
-	}
-	
-	
-	public void leFaireDescendre() {
-		
-		fermer();
-		doitDescendre();
-		descendre();
-		ouvrir();				
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
