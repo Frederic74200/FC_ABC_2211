@@ -12,18 +12,26 @@ public class Robot {
 	// Variables de classe --------------------------------------------------------------
 	
 	private String nomRobot;
-	private String MmximumHorizontal;
+	private String mmximumHorizontal;
+	private int mmximumHorizontalNb;
 	private int maximumVertical;
 	private String minimumHorizontal = "A";
+	private int minimumHorizontalNB = 1;
 	private final int minimumVertical = 1;
 	private Boolean colisSurRobot;
 	private String positionX;
+	private int positionXNb;
 	private int positionY;
 	
 	
 	// Consturcteurs --------------------------------------------------------------------
 	
-	
+	// Robot par défaut
+	public Robot() {
+		this.nomRobot = "Robot Kaz Yeah! SA";
+		this.mmximumHorizontal ="J";
+		
+	}
 	
 	
 	

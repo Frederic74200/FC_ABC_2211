@@ -63,7 +63,7 @@ public class Bouteille {
 	// remplir
 
 	public boolean remplir() {
-		if (this.estOuverte == true && this.volumePlusCl < (this.capactiteCl - this.volumePresentCl)) {
+		if (this.estOuverte == true && this.volumePlusCl <= (this.capactiteCl - this.volumePresentCl)) {
 			this.volumePresentCl = this.volumePresentCl + this.volumePlusCl;
 			return true;
 		} else {
@@ -74,7 +74,7 @@ public class Bouteille {
 	// vider
 
 	public boolean vider() {
-		if (this.estOuverte == true && this.volumeMoinsCl < this.volumePresentCl) {
+		if (this.estOuverte == true && this.volumeMoinsCl <= this.volumePresentCl) {
 			this.volumePresentCl = this.volumePresentCl - this.volumeMoinsCl;
 			return true;
 		} else {
