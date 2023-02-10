@@ -6,6 +6,7 @@ public class Robot {
 	// Attributs --------------------------------------------------------------
 	
 	private String lettres ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private char uneLettre;
 	private String nomRobot;
 	
 	private String maximumX;
@@ -77,16 +78,11 @@ public int correspondanceLettresMaximumX() { // correspondance maximumX
 		return this.maximumXNb;
 	}
 	
-// Correspondances entre nombres et lettres pour l'axe horizontal  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Correspondances entre nombres et lettres pour l'axe horizontal  
 
-public void correspondanceNombresPositionX() {
+public void correspondanceNombresPositionX() { // correspondance position X
 	
-	for (int i = 0; i < this.lettres.length(); i++) {
-		if (this.positionXNb == i) {
-			this.positionX = this.lettres(i);
-			}
-				}
-	return this.positionX;
+	this.uneLettre = this.lettres.charAt(this.positionXNb);
 }
 
 

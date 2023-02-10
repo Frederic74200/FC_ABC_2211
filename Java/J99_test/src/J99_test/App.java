@@ -13,6 +13,17 @@ public class App {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		
+		String lettres ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		int i = 5;
+		
+		char caractere = lettres.charAt(i);
+		System.out.println("Lettre "+caractere);
+		
+		
+		
+		
+		
+		
 		
 	
 	}
