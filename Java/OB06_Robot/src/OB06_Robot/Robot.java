@@ -20,7 +20,7 @@ public class Robot {
 	private int minimumXNB = 0;
 
 	private int maximumY;
-	private final int minimumY = 1;
+	private int minimumY = 1;
 
 	private String positionX;
 	private int positionXNb;
