@@ -10,18 +10,18 @@ public class Fourchette {
 
 	private int min;
 	private int max;
-	private int minUser;
-	private int maxUser;
-	private int minComputer;
-	private int maxComputer;
+	//private int minUser;
+//	private int maxUser;
+	//private int minComputer;
+	// private int maxComputer;
 	private int nombreAtrouver;
 	private int propositionUser;
-	private int propositionComputer;
+	//private int propositionComputer;
 	private int nombreEssaisUser;
-	private int nombreEssaisComputer;
+	// private int nombreEssaisComputer;
 	private int nombreEssaisMax;
-	private Boolean rejoueEncore;
-	private Boolean jpueContrePC;
+	private Boolean rejoueEncore; // public 
+	private Boolean jpueContrePC; // public
 
 	// Les constructeurs
 	// --------------------------------------------------------------------
@@ -43,7 +43,7 @@ public class Fourchette {
 	// set
 	// ---------------------------------------------------------------------------------
 
-	public boolean setJouerEncore(Boolean _rejoueEncore) {
+	/* public boolean setJouerEncore(Boolean _rejoueEncore) {  void
 		this.rejoueEncore = _rejoueEncore;
 
 		if (_rejoueEncore == true) {
@@ -53,20 +53,16 @@ public class Fourchette {
 		}
 	}
 
-	public boolean setJouerContrePC(Boolean _jpueContrePC) {
+	public void setJouerContrePC(Boolean _jpueContrePC) { // void 
 		this.jpueContrePC = _jpueContrePC;
 
-		if (_jpueContrePC == true) {
-			return this.jpueContrePC;
-		} else {
-			return this.jpueContrePC;}
-
+		
 	}
 	
-	public int propositionUser(int _propositionUser ) {
+/*	public int propositionUser(int _propositionUser ) {
 		this.propositionUser = _propositionUser;
 		return this.propositionUser;		
-	}
+	} */
 	
 	// get -------------------------------------------------------------------------
 	
@@ -95,7 +91,7 @@ public class Fourchette {
 		return this.propositionComputer;
 	}
 
-	public boolean validerPropositionUser() {
+	public boolean validerPropositionUser() { // valider proposition 
 		if (this.propositionUser >= this.minUser && this.propositionUser <= this.maxUser) {
 			return true;
 		} else {
@@ -103,7 +99,10 @@ public class Fourchette {
 		}
 	}
 
-	public boolean jouerContrePC() {
+	
+	
+	---------------------------------------------------------------------------------------
+/*/	public boolean jouerContrePC() { 
 
 		if (this.jpueContrePC == true) {
 			this.minUser = this.min;
@@ -117,9 +116,9 @@ public class Fourchette {
 			return false;
 		}
 
-	}
+	} */
 
-	public int nouvelleFourcehtteUser() {
+	public int nouvelleFourcehtteUser() { // nouvelle fourchette inclure essais 
 
 		if (this.propositionUser < this.nombreAtrouver) {
 			this.minUser = this.propositionUser;
@@ -136,7 +135,7 @@ public class Fourchette {
 
 	}
 
-	public int nouvelleFourcehttePC() {
+/*	public int nouvelleFourcehttePC() {
 
 		if (this.propositionComputer < this.nombreAtrouver) {
 			this.minComputer = this.propositionComputer;
@@ -151,35 +150,35 @@ public class Fourchette {
 			return this.propositionComputer;
 		}
 
-	}
+	} */
 
 	public boolean victoireUser() {
 
-		if (this.jpueContrePC == true) {
+	/*	if (this.jpueContrePC == true) {
 			if (this.nombreEssaisUser <= this.nombreEssaisMax && this.propositionUser == this.nombreAtrouver) {
 
 				System.out.println("Bravo ! Vous avez gagné !");
 
 			}
 			return true;
-		} else if (this.jpueContrePC == false) {
+		} */ else if (this.jpueContrePC == false) {
 			if (this.nombreEssaisUser <= this.nombreEssaisMax && this.propositionUser == this.nombreAtrouver) {
 
 				System.out.println("Bravo ! Vous avez gagné !");
 			}
 			return true;
-		} else {
+		} /* else {
 			return false;
 		}
 
-	}
-
+	} */
+/*
 	public boolean victoireComputer() {
 
 		if (this.jpueContrePC == true) {
 			if (this.nombreEssaisComputer <= this.nombreEssaisMax && this.propositionComputer == this.nombreAtrouver) {
 
-				System.out.println("L'ordinateur a gagné. Le nombre à trouver étéit : " + this.nombreAtrouver);
+			//	System.out.println("L'ordinateur a gagné. Le nombre à trouver étéit : " + this.nombreAtrouver);
 
 			}
 			return true;
@@ -189,7 +188,7 @@ public class Fourchette {
 
 	}
 
-	public boolean egalite() {
+/*	public boolean egalite() {
 
 		if (this.jpueContrePC == true) {
 			if (this.nombreEssaisComputer == this.nombreEssaisMax && this.propositionComputer != this.nombreAtrouver
@@ -202,13 +201,13 @@ public class Fourchette {
 			return false;
 		}
 
-	}
+	} */
 
 	public boolean joueurPerdSeul() {
 		
 		if (this.jpueContrePC == false) {
 			if ( this.nombreEssaisUser == this.nombreEssaisMax && this.propositionUser != this.nombreAtrouver) {
-				System.out.println("Vous avez perdu ! Le nombre à trouver étéit : " + this.nombreAtrouver);
+			//	System.out.println("Vous avez perdu ! Le nombre à trouver étéit : " + this.nombreAtrouver);
 			}
 			return true;
 		}
