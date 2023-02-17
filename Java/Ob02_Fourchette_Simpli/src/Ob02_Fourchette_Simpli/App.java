@@ -6,26 +6,11 @@ public class App {
 		// TODO Auto-generated method stub
 
 		
+	Fourchette joueur = new Fourchette();
+	Fourchette ordi = new Fourchette();
 		
-		Fourchette fork = new Fourchette();
-		
-		int miniJoueur = fork.getMin() ; 
-		int maxiJoueur = fork.getMax(); 
-		int minPC = fork.getMin();
-		int maxPC = fork.getMax();	
-		
-		
-		
-		
-;		int nbCoupsMax = fork.getEssaisMax();
-		
-		
-		System.out.println("min "+miniJoueur+" max "+maxiJoueur+" coups "+nbCoupsMax);
-		
-		
-		
-		
-		
+		System.out.println(joueur.toString());
+		System.out.println(ordi.toString());
 		
 		
 	}
