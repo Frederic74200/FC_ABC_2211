@@ -1,0 +1,34 @@
+body {
+	background-image: url(https://www.coupsdecoeurpourlemonde.com/wp-content/uploads/2020/09/Les-fromages-savoyards.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	color: #ffffff;
+	text-shadow: 1px 1px black;
+	text-align: center;
+}
+
+.bloc, h1 {
+	background-color: rgba(0,0,0,0.4) !important;
+	border: solid 1px #ffffff;
+	margin-left: 33vw;
+	margin-right: 33vw;
+	margin-bottom: 3vh;
+}
+p.prix:nth-child(1) {
+	font-size: 25px;
+}
+
+
+hr {
+	color: rgb(255, 255, 255);
+	margin-left: 140px;
+	margin-right: 140px;
+}
+
+.prix {color : #000000; 
+	background-color: #ffffff; 
+	margin-left: 10vw; 
+	margin-right: 10vw; 
+	border-radius: 50%; 
+	padding-top: 5px;
+	padding-bottom: 5px;}

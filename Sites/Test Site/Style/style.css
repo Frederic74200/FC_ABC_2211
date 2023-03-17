@@ -1,0 +1,27 @@
+
+
+H1 { color: chartreuse; font-size: 50px; text-align: center; padding-top: 40px;}
+
+img {max-height: 15vw; display: block; margin-left: auto; margin-right: auto;  border: 3px solid #ff0000; margin-bottom: 20px;}
+
+#blocbloc {display: flex; float: left; height: 15vh; margin-bottom: 20px;}
+
+.bloc {display:inline-block; border: solid 2px black; width:50vw; }
+
+#blocbloc > div:nth-child(1) > p { color: darkcyan; font-size: 30px; font-family: Arial, Helvetica, sans-serif; text-align: center; font-weight: 900;}
+#blocbloc > div:nth-child(2) > p { color:crimson; font-size: 30px; font-family: Arial, Helvetica, sans-serif; text-align: center; font-weight: 900;}
+
+
+#blocBis {display: flex; float: left; height: 15vh; margin-bottom: 20px;}
+
+#blocBis > div:nth-child() {background: linear-gradient(#e66465, #9198e5) !important ;}
+
+
+@media only screen and (max-width: 800px)  {
+
+    H1 { color:darkgreen ; font-size: 50px; text-align: center; padding-top: 20px;}
+
+
+
+
+}

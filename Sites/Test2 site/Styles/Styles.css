@@ -1,0 +1,9 @@
+header { height: 20vh; background-color: aqua;  }
+
+main {display: flex; flex-flow: row wrap;   }
+.bloc {  display : inline-flex; background-color: coral; border : solid 2px black; border-radius: 15%; height: 15vh; width: 50vw;}
+/* div.bloc:nth-child(1) { order: 1;}
+div.bloc:nth-child(2) { order: 2;}
+div.bloc:nth-child(3) { order: 3;}
+div.bloc:nth-child(4) { order: 4;} */
+footer  { height: 20vh; background-color :blueviolet;}
